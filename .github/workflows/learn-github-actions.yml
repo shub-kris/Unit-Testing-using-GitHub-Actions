@@ -1,0 +1,16 @@
+name: learn-github-actions
+on: [push, pull_request]
+jobs: 
+  unit-test-calculator.py:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requiremnts.txt
+      - name: Test with Pytest
+        run: pytest -vv 
