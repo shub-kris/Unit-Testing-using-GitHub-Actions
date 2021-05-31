@@ -1,7 +1,7 @@
 name: learn-github-actions
 on: [push, pull_request]
 jobs: 
-  unit-test-calculator.py:
+  unit_test_calculator.py:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
